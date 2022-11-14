@@ -1,16 +1,15 @@
-const firstRandomNum = Math.floor(Math.random()*6) + 1
-const firstDiceImage ='assets/dice' + firstRandomNum + '.png';
-document.querySelectorAll('img')[0].setAttribute('src',firstDiceImage);
+ var random1 = Math.random();
+ random1 = Math.floor(random1*6+1);
+ console.log(random1);
 
-const secondRandomNum = Math.floor(Math.random()*6) + 1
-const secondDiceImage ='assets/dice' + secondRandomNum + '.png';
-document.querySelectorAll('img')[0].setAttribute('src',secondDiceImage);
+ var random2 = Math.random();
+ random2 = Math.floor(random2*6+1);
+ console.log(random2);
 
-if(firstRandomNum < secondRandomNum){
-    document.querySelector('h1').innerHTML = ' Winner is Player 2 !';
-}else if(firstRandomNum > secondRandomNum){
-    document.querySelector('h1').innerHTML = ' Winner is Player 1 !';
-}
-else {
-    document.querySelector('h1').innerHTML = ' Draw!!';
-}
+
+ document.querySelector(".dice1").setAttribute("src", "assets/dice"+random1+".png");
+ document.querySelector(".dice2").setAttribute("src", "assets/dice"+random2+".png");
+
+ if (random1 > random2) document.querySelector("h1").innerText = "Winner is Player 1 !";
+ else if (random1 === random2) document.querySelector("h1").innerText = "Draw!!";
+ else document.querySelector("h1").innerText = "Winner is Player 2 !";
