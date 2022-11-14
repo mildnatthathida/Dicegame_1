@@ -31,7 +31,15 @@ img {
 
 }
 
-h4{
-
+.footer {
   text-align: center;
+}
+
+.footer h2{
+  text-align: center;
+}
+
+.footer a{
+  text-align: center;
+  color: black;
 }
